@@ -1,0 +1,137 @@
+/* 초기화 세팅 */
+@charset "utf-8";
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 초기화 세팅 끝 */
+
+/* bt wrap */
+.bt_wrap {
+    margin-top: 30px;
+    font-size: 1.4rem;
+}
+
+.bt_wrap a {
+    display: inline-block;
+    min-width: 80px;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.bt_wrap a:hover {
+    text-decoration: underline;
+}
+
+/* index 시작 */
+.wrap {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.board_list {
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 1px solid black;
+}
+
+.board_list caption {
+    padding: 30px;
+    font-size: 1.5rem;
+}
+
+.board_list th, td {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 10px;
+    border-bottom: 1px solid black;
+    border-spacing: 0px;
+}
+
+.board_list td.title > a:hover{
+    display: inline-block;
+    text-decoration: underline;
+}
+
+.bt_list {
+    text-align: right;
+}
+
+.board_page {
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.board_page a {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    box-sizing: border-box;
+    font-size: 1.4rem;
+}
+
+.board_page a:hover{
+    text-decoration: underline;
+}
+
+.board_page a.bt {
+    letter-spacing: -2px;
+}
+
+.board_page a.num {
+    font-size: 1.5rem;
+}
+
+.board_page a.num.on {
+    border-color: #000;
+    background: #000;
+    color: #fff;
+}
+
+
+@media all and (max-width:1000px) {
+    .wrap {
+        width: 100vw;
+    }
+}
+
+@media all and (max-width:767px) {
+    .wrap {
+        width: 90vw;
+    }
+
+    .board_list th:nth-of-type(1),
+    .board_list td:nth-of-type(1){ 
+        display: none;
+    }
+
+    .board_list th:nth-of-type(3),
+    .board_list td:nth-of-type(3){ 
+        display: none;
+    }
+
+    .board_list th:nth-of-type(4),
+    .board_list td:nth-of-type(4){ 
+        display: none;
+    }
+}
